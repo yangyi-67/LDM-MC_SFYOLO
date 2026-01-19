@@ -23,21 +23,25 @@ This architecture establishes a mutually reinforcing closed loop of "Dynamic Gen
 
 The repository is organized to highlight the core contributions:
 
+## 📂 Project Structure
+
+The repository is organized to highlight the core contributions:
+
+```text
 LDM-MC-SFYOLO/
 ├── TargetAugment/         # Target Augmentation Module (TAM)
-│   ├── enhance_ldm.py    # [Core] LDM-based dynamic style generation logic
-│   └── enhance_vgg16.py  # VGG-based style transfer (Baseline augmentation)
+│   ├── enhance_ldm.py    # [Core] LDM-based dynamic style generation
+│   └── enhance_vgg16.py  # VGG-based style transfer (Baseline)
 ├── utils/                 # Utility functions and core logic
-│   ├── mc_dropout.py     # [Core] MC Dropout implementation & uncertainty estimation
+│   ├── mc_dropout.py     # [Core] MC Dropout & uncertainty estimation
 │   └── loss.py           # Modified YOLOv5 loss function for SFDA
 ├── models/                # Architecture definitions
 │   ├── yolo.py           # YOLOv5 model construction
-│   └── yolov5l.yaml      # Configuration for the YOLOv5-Large backbone
-├── scripts/               # Helper scripts for data and training
-├── run_adaptation.py     # [Main] Entry point for Source-Free Domain Adaptation
+│   └── yolov5l.yaml      # Configuration for the Large backbone
+├── run_adaptation.py     # [Main] Entry point for SFDA training
 ├── run_pretrain.py       # Script for source-domain pre-training
-├── evaluate.py           # Model evaluation and mAP calculation
 └── requirements.txt      # Environment dependencies
+```
 
 ## **🛠️ Installation**
 
@@ -59,12 +63,13 @@ LDM-MC-SFYOLO/
 ### **1\.Data Preparation**
 
 Organize your datasets (Cityscapes, Foggy Cityscapes, KITTI, Sim10k) as follows:：
-
+```text
 datasets/
 ├── Cityscapes/
 ├── Foggy_Cityscapes/
 ├── KITTI/
 └── Sim10k/
+```
 
 ### **2\. Source Pre-training**
 Train a baseline model on the source domain:
@@ -89,8 +94,6 @@ python run_adaptation.py \
 
 ## **🙏 Acknowledgments**
 
-📧 Contact
-For any questions, please open an issue or contact: s202420211022@stu.tyust.edu.cn.
-
 
 ## **📧 Contact**
+For any questions, please open an issue or contact: s202420211022@stu.tyust.edu.cn.
