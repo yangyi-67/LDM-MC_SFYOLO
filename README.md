@@ -39,18 +39,24 @@ LDM-MC-SFYOLO/
 
 ## **🛠️ Installation**
 
-1. **Clone the Repository:**：  
+1. **Clone the Repository:**：
+   ```text 
    git clone https://github.com/yangyi-67/LDM-MC_SFYOLO.git
    cd LDM-MC_SFYOLO
+   ```
 
-2. **Create Environment**：  
+3. **Create Environment**：
+   ```text 
    conda create \-n sfyolo python=3.8 \-y  
    conda activate sfyolo
+   ```
 
-3. **Install Dependencies**：  
+5. **Install Dependencies**： 
    \# We recommend using PyTorch 2.0+ and CUDA 11.8+ for LDM inference.
+   ```text 
     pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
     pip install -r requirements.txt
+   ```
 
 ## **🚀 Quick Start**
 
@@ -67,12 +73,13 @@ datasets/
 
 ### **2\. Source Pre-training**
 Train a baseline model on the source domain:
+```text
 python run_pretrain.py --weights yolov5s.pt --data configs/source_cityscapes.yaml --imgsz 960 --epochs 100
-
+```
 
 ### **3\. Source-Free Domain Adaptation**
 Launch the adaptation process using the synergistic framework：
-
+```text
 python run_adaptation.py \
     --weights path/to/source_model.pt \
     --data configs/target_foggy_cityscapes.yaml \
@@ -84,7 +91,7 @@ python run_adaptation.py \
     --SSM_alpha 0.0 \
     --batch-size 16 \
     --device 0
-
+```
 
 ## **🙏 Acknowledgments**
 We thank the authors of YOLOv5, SF-YOLO, and HuggingFace Diffusers for their excellent open-source contributions!
