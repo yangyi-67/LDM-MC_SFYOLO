@@ -1,8 +1,5 @@
 # **LDM-MC-SFYOLO: A Synergistic Framework for Source-Free Domain Adaptive Object Detection via Latent Diffusion and Uncertainty Estimation**
 
-\<div align="center"\>
-
-\</div\>
 
 ## **📖 Overview**
 
@@ -19,9 +16,6 @@ Uncertainty-Aware Pseudo-Labeling: Integrates Monte Carlo (MC) Dropout to quanti
 
 This architecture establishes a mutually reinforcing closed loop of "Dynamic Generation and Uncertainty Verification".
 
-## **📂 Project Structure**
-
-The repository is organized to highlight the core contributions:
 
 ## 📂 Project Structure
 
@@ -93,7 +87,7 @@ python run_adaptation.py \
 
 
 ## **🙏 Acknowledgments**
-
+We thank the authors of YOLOv5, SF-YOLO, and HuggingFace Diffusers for their excellent open-source contributions!
 
 ## **📧 Contact**
 For any questions, please open an issue or contact: s202420211022@stu.tyust.edu.cn.
