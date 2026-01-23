@@ -86,9 +86,12 @@ python run_adaptation.py \
     --ta_method ldm \
     --ldm_strength 0.35 \
     --mc_dropout --mc_T 10 \
-    --conf_thres 0.4 --iou_thres 0.3 \
+    --conf_thres 0.4 \
+    --unc_thres 0.05 \
+    --alpha 0.6 --beta 0.4 \
+    --iou_thres 0.3 \
     --teacher_alpha 0.999 \
-    --SSM_alpha 0.0 \
+    --SSM_alpha 0.1 \
     --batch-size 16 \
     --device 0
 ```
